@@ -31,9 +31,9 @@ public class PDFGenerator {
             System.out.println("Sorry, the specified class \""+className+"\" was not found.");
         }
 
-        Resume resume = new Resume();
+        ConcreteResume concreteResume = new ConcreteResume();
         try {
-            createPDF(resume);
+            createPDF(concreteResume);
         } catch (FileNotFoundException fnfe){
             System.out.println("File not found.");
         } catch (IOException ioe){
@@ -49,7 +49,7 @@ public class PDFGenerator {
         System.out.println(obj.toString());
     }
 
-    public static void createPDF(Resume resume) throws FileNotFoundException, IOException {
+    public static void createPDF(ConcreteResume concreteResume) throws FileNotFoundException, IOException {
         OutputStream fos = new FileOutputStream(pdfDest);
         PdfWriter writer = new PdfWriter(fos);
         PdfDocument pdf = new PdfDocument(writer);
@@ -59,12 +59,12 @@ public class PDFGenerator {
         Paragraph education = new Paragraph();
         Paragraph experience = new Paragraph();
 
-        education.add(resume.getEducation().toString());
-        experience.add(resume.getExperience().toString());
+        education.add(concreteResume.getEducation().toString());
+        experience.add(concreteResume.getExperience().toString());
 
-        Text candidateName = new Text(resume.getHeader().getCandidateName()).setFontSize(14).setBold();
-        Text candidatePhone = new Text(resume.getHeader().getCandidatePhone());
-        Text candidateEmail = new Text(resume.getHeader().getCandidateEmail());
+        Text candidateName = new Text(concreteResume.getHeader().getCandidateName()).setFontSize(14).setBold();
+        Text candidatePhone = new Text(concreteResume.getHeader().getCandidatePhone());
+        Text candidateEmail = new Text(concreteResume.getHeader().getCandidateEmail());
         header.add(candidateName);
         header.add("\n");
         header.add(candidatePhone);
