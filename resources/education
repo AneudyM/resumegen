@@ -1,0 +1,23 @@
+<Education>
+    <School name="Western Michigan University (WMU)" type="University">
+        <Degree type="Graduate" name="Master of Arts" />
+        <Major name="Evaluation, Measurement, and Research" />
+        <Gpa value="3.5" />
+        <Location value="Kalamazoo, MI, USA" />
+        <Graduation status="No" date="April 2018"/>
+        <Description>
+            <item>Government graduate international scholarship - 100% tuition grant (2008)</item>
+        </Description>
+    </School>
+    <School name="Western Michigan University (WMU)" type="University">
+        <Degree type="Baccalaureate" name="Bachelor of Business Administration" />
+        <Major name="Evaluation, Measurement, and Research" />
+        <Minor name="General Business" />
+        <Gpa value="2.79" />
+        <Location value="Kalamazoo, MI, USA" />
+        <Graduation status="Yes" date="April 2013"/>
+        <Description>
+            <item>Government baccalaureate international scholarship - 100% tuition grant (2008)</item>
+        </Description>
+    </School>
+</Education>
